@@ -1,0 +1,30 @@
+h1 {
+    color: #ddc3c1;
+  }
+div {
+    color: #ffffff;
+  }
+a {
+    color: #ffffff;
+  }
+a {
+    text-decoration: none;
+  }
+  img {
+    width: 15px;
+    height: 15px;
+  }
+  .link {
+    color: #ffffff; /* 通常時の文字色 */
+    text-decoration: none; /* 下線を消す */
+  }
+  
+  .link:hover {
+    color: #ddc3c1; /* マウスオーバー時の文字色 */
+  }
+  body {
+    background-image: url('https://cdn.discordapp.com/attachments/994193830356209704/1074966638572617802/isHnJdVcl5EScOw1676362347_1676362386.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+  }

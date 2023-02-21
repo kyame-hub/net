@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/994193830356209704/1074451907659169862/LpzAy7QRCAqGEgd1676239340_1676239390_2.png" sizes="32x32">
+  <link rel="stylesheet" type="text/css" href="music.css">
+  <style>
+    /* Add your CSS styles here */
+    body {
+      background-color: #E6E6E6;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .music-player {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .song-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .jp {
+      text-align: center;
+      font-size: 11px;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .controls button {
+      background-color: #E6E6E6;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .controls button:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="music-player">
+      <p class="song-title">Band Inst.</p>
+      <p class="jp">騒音のない世界.</p>
+
+      <audio controls>
+        <source src="kaerimichi.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="controls">
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="stop">Stop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add your JavaScript here -->
+  <script>
+    const audio = document.querySelector('audio');
+    const playBtn = document.querySelector('#play');
+    const pauseBtn = document.querySelector('#pause');
+    const stopBtn = document.querySelector('#stop');
+
+    playBtn.addEventListener('click', function() {
+      audio.play();
+    });
+
+    pauseBtn.addEventListener('click', function() {
+      audio.pause();
+    });
+
+    stopBtn.addEventListener('click', function() {
+      audio.pause();
+      audio.currentTime = 0;
+    });
+  </script>
+</body>
+</html>
